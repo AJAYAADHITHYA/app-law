@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+   - source: /index-html
+     destination: /var/www/html
+hooks:
+  BeforeInstall:
+    - location: script/httpd_jquery.min.js
+      timeout: 300
+      run as: root
+    - location: script/httpd_bootstrap.bundle.min.js
+      timeout: 300
+      run as: root
+
